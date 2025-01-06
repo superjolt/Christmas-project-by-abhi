@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+        *{
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Fredoka One', cursive;
+            color: #2e4057;
+            background-color: rgb(109, 100, 100);
+            margin: 0;
+            line-height: 30px;
+            padding: 0;
+        }
+
+        .snowfall {
+            position: fixed;
+            z-index: -1;
+            inset: 0;
+            overflow: hidden;
+            background: url(second.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            height: 100vh;
+            width: 100vw;
+        }
+
+            .snowflake {
+            --small: 3px;
+            --medium: 7px;
+            --large: 10px;
+            width: var(--small); 
+            height: var(--small);
+            position: absolute;
+            background-color: #fff;
+            border-radius: 50%;
+            animation: snow 6s linear infinite, wind 10s ease-in-out infinite;
+            top: -10%;
+            left: 10%;
+        }
+
+            .snowflake:nth-child(2n + 3) {
+            /* 3, 5, 7, ... */
+            width: var(--medium);
+            height: var(--medium); }
+
+            .snowflake:nth-child(5n) {
+            /* Multiples of 3 */
+            width: var(--large);
+            height: var(--large);
+            }
+
+            .snowflake:nth-child(1) {
+            left: 25%;
+            animation-delay: 1s;
+            }
+
+            .snowflake:nth-child(2) {
+            left: 85%;
+            animation-delay: 1.5s;
+            }
+
+            .snowflake:nth-child(3) {
+            left: 30%;
+            animation-delay: 2s;
+            }
+
+            .snowflake:nth-child(4) {
+            left: 40%;
+            animation-delay: 2.5s;
+            }
+
+            .snowflake:nth-child(5) {
+            left: 10%;
+            animation-delay: 3s;
+            }
+
+            .snowflake:nth-child(6) {
+            left: 60%;
+            animation-delay: 3.5s;
+            }
+
+            .snowflake:nth-child(7) {
+            left: 70%;
+            animation-delay: 4s;
+            }
+
+            .snowflake:nth-child(8) {
+            left: 15%;
+            animation-delay: 4.5s;
+            }
+
+            .snowflake:nth-child(9) {
+            left: 50%;
+            animation-delay: 5s;
+            }
+
+            .snowflake:nth-child(10) {
+            left: 80%;
+            animation-delay: 5.5s;
+            }
+
+            .snowflake:nth-child(11) {
+            left: 20%;
+            animation-delay: 6s;
+            }
+
+            .snowflake:nth-child(12) {
+            left: 65%;
+            animation-delay: 6.5s;
+            }
+
+            .snowflake:nth-child(13) {
+            left: 55%;
+            animation-delay: 7s;
+            }
+
+            .snowflake:nth-child(14) {
+            left: 35%;
+            animation-delay: 7.5s;
+            }
+
+            .snowflake:nth-child(15) {
+            left: 45%;
+            animation-delay: 8s;
+            }
+
+            .snowflake:nth-child(16) {
+            left: 5%;
+            animation-delay: 8.5s;
+            }
+
+            .snowflake:nth-child(17) {
+            left: 75%;
+            animation-delay: 9s;
+            }
+
+            .snowflake:nth-child(18) {
+            left: 90%;
+            animation-delay: 9.5s;
+            }
+
+            .snowflake:nth-child(19) {
+            left: 60%;
+            animation-delay: 10s;
+            }
+
+            .snowflake:nth-child(20) {
+            left: 25%;
+            animation-delay: 10.5s;
+            }
+
+            .snowflake:nth-child(18) {
+            left: 90%;
+            animation-delay: 9.5s;
+            }
+
+            .snowflake:nth-child(19) {
+            left: 60%;
+            animation-delay: 10s;
+            }
+
+            .snowflake:nth-child(20) {
+            left: 25%;
+            animation-delay: 10.5s;
+            }
+
+
+            @keyframes snow {
+            100% {
+                top: 100%;
+            }
+            }
+
+            @keyframes wind {
+            50% {
+                transform: translateX(120px);
+            }
+            }
+
+        header {
+            background-color:  #8b0000c5;
+            backdrop-filter: blur(10px);
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+            transition: all 0.78s ease;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-container{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .card {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0);
+            border: 2px solid #8b0000;
+            border-radius: 10px;
+            backdrop-filter: blur(20px);
+            margin: 10px;
+            color: rgb(255, 255, 255);
+            padding: 15px;
+            width: 350px;
+            transition: all 0.75s ease;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card:hover{
+            background-color:rgba(255, 0, 0, 0.171);
+            backdrop-filter: blur(20px);
+            color: white;
+            transform: scale(1.075);
+            box-shadow: 8px 0 100px rgba(20, 54, 165, 0.651),
+             -8px 0 100px rgb(18, 70, 18);
+            
+        }
+        
+        .card img {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            margin: 15px 0;
+        }
+
+        header:hover{
+            background-color: rgba(12, 114, 12, 0.68);
+            backdrop-filter: blur(10px);
+        }
+
+        footer:hover{
+            background-color: rgba(12, 114, 12, 0.68);
+            backdrop-filter: blur(10px);
+        }
+
+        footer {
+            background-color: #8b0000c5;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            backdrop-filter: blur(10px);
+            bottom: 0;
+            transition: all 0.78s ease;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media only screen and (max-width: 1145px){
+            .card-container{
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media only screen and (max-width: 780px){
+            .card-container{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media only screen and (max-width: 398px){
+            .card-container{
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
